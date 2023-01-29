@@ -1,0 +1,47 @@
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: rgba(255, 255, 255, 0.87);
+    background-color: $dark-body-background;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    color: $dark-body-font-color;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+  nav h1 {
+    color: #E6E6E6;
+  }
+  .nav--list {
+    background-color: $dark-body-background;
+  }
+  .nav-links a {
+    color: $dark-body-font-color;
+    background-color: #23202E;
+  }
+  .btm-nav-bar {
+    background-color: #100F14;
+  }
+  .menu-close {
+    color: #fafafa;
+  }
+  .checklist li {
+    background-color: #23202E;
+  }
+  .checklist li input {
+    border-color: #443e59;
+
+    &:focus {
+      background-color: $dark-body-background;
+    }
+  }
+  .checklist li.selected {
+    background-color: #3B354D;
+  }
+  .checklist li.done {
+    background-color: $dark-body-background;
+  }
+}

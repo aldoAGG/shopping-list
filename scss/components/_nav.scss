@@ -1,0 +1,102 @@
+// -----------------------------------------------------------------------------
+// This file contains all navigation styles.
+// -----------------------------------------------------------------------------
+
+.btm-nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  bottom: 0;
+  background-color: #FAFAFC;
+  z-index: 1;
+}
+
+.nav--list {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  top: 0;
+  text-align: right;
+  background: $light-body-background;
+  opacity: 0;
+}
+
+nav a {
+  text-decoration: none;
+  display: block;
+}
+
+nav h1 {
+  color: #2E384D;
+  font-size: 1.25em;
+}
+
+.menu-close {
+  font-size: 1.75em;
+  font-weight: 700;
+  color: $light-body-font-color;
+  text-align: right;
+  background-color: transparent;
+  border: none;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.nav-links a {
+  padding: 0.75em 0;
+  margin: 2vh 0.4em;
+  text-align: center;
+  font-weight: $global-weight-normal;
+  font-size: 1.25em;
+  background-color: #fff;
+  border-radius: 10px;
+  color: #333;
+}
+
+.nav--show {
+  display: block;
+  opacity: 1;
+  z-index: 2;
+}
+
+.complete,
+.incomplete {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 0.6em 0.45em;
+    background: transparent;
+  }
+}
+
+.complete {
+  &::before {
+    background-image: linear-gradient(to right, rgba(17, 164, 34, 0.5), rgba(17, 164, 34, 0.3));
+  }
+}
+
+.incomplete {
+  &::before {
+    background-image: linear-gradient(to right, rgba(239, 232, 97, 0.9), rgba(239, 232, 97, 0.5));
+  }
+}
+
+.back-button {
+  font-size: 2em;
+  color: $light-body-font-color;
+}

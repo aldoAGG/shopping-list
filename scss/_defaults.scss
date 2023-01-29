@@ -1,0 +1,58 @@
+:root {
+  font-family: $body-font-family;
+  font-size: $global-font-size;
+  line-height: $global-lineheight;
+  font-weight: $global-weight-normal;
+
+  color-scheme: light dark;
+  color: $light-body-font-color;
+  background-color: $light-body-background;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+.hidden {
+  display: none;
+}
+
+body {
+}
+.text-center {
+  text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+a {
+  border: none;
+  outline: 0;
+}
+img {
+  vertical-align: middle;
+  height: auto;
+  margin: 0 auto;
+}
+.no-margin {
+  margin: 0;
+}
+.miceType {
+  font-size: 0.75em;
+}
+footer {
+  background: #f5f5f5;
+  padding: 2.813em 0;
+  p {
+    font-size: 0.75em;
+    text-align: left;
+  }
+}
+
+@include bp($medium){
+}
+@include bp($large){
+}

@@ -1,0 +1,19 @@
+{
+  "name": "shopping-list-vite",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-legacy": "^3.0.1",
+    "terser": "^5.16.1",
+    "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}

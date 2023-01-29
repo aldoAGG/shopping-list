@@ -1,0 +1,24 @@
+.sect__wrap {
+  padding: 1.875em 0;
+}
+.sect__content {
+  max-width: $global-width;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  margin: 0 auto;
+}
+
+@include bp($medium) {
+  .sect__content {
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+}
+
+@include bp($large) {
+  .sect__content {
+    max-width: $global-width;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+}

@@ -1,0 +1,61 @@
+.checklist-container {
+  margin: 0 0 2em 0;
+}
+
+.checklist-container:last-of-type {
+  margin-bottom: 3.5em;
+}
+
+.checklist-container h2 {
+  margin-bottom: 16px;
+  font-size: 1.13em;
+  font-weight: $global-weight-bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+}
+
+.checklist {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.checklist li {
+  padding: 10px 1em;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  background-color: #FAFAFC;
+
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+}
+
+.checklist li input {
+  width: 100%;
+  padding: 0.25em 0.5em;
+  margin-top: 5px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #d0cfe3;
+
+  &:focus {
+    outline: none;
+    background-color: #fff;
+  }
+}
+
+.checklist li.selected {
+  background-color: #E0DFF6;
+}
+
+.checklist li.done {
+  color: #737780;
+  text-decoration: line-through;
+  background-color: #F1EDF8;
+
+  input {
+    color: #737780;
+    text-decoration: line-through;
+  }
+}

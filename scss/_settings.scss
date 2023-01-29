@@ -1,0 +1,102 @@
+// 1. Global
+// 2. Breakpoints
+// 3. The Grid
+// 4. Typography
+// 5. Helper Classes
+// 6. Mixins
+
+$black: #000;
+$white: #fff;
+$smoke: #404041;
+$freeoskOrange: #ff671f;
+$freeoskGrey1: #97999B;
+$freeoskGrey2: #808282;
+$freeoskBlue: #4EC3E0;
+
+// Light Theme Colors
+$light-body-background: #F1EDF8;
+$light-body-font-color: #2E384D;
+// Dark Theme Colors
+$dark-body-background: #16141C;
+$dark-body-font-color: #E6E6E6;
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;800&display=swap');
+
+// 1. Global
+$global-font-size: 100%;
+$global-width: 1200px;
+$global-lineheight: 1.5;
+$body-font-family: 'Raleway', sans-serif;
+$header-font-color: #2E384D;
+$header-font-family: 'Raleway', sans-serif;
+$global-padding: 1rem;
+$global-margin: 1rem;
+$global-weight-normal: 500;
+$global-weight-bold: 800;
+$global-radius: 5px;
+$button-font-family: $body-font-family;
+// Navigation
+$nav-font-family: $body-font-family;
+$nav-back: rgba(0,0,0, 0.05);
+$nav-back-hover: lighten($white, 20);
+$nav-link-color: $freeoskGrey1;
+$nav-link-hover: $smoke;
+
+// 2. Breakpoints
+$bp-xs: 0;
+$bp-small: 26.25rem; // 420px
+$bp-medium: 37.5rem; // 600px
+$bp-large: 56.25rem; // 900px
+$bp-xlarge: 75rem; //1200px
+//$bp-xxlarge: 112.5rem; // 1800px
+
+//  3. Media Queries
+// SMALL
+$xs: '(min-width: #{$bp-xs})';
+// SMALL
+$small: '(min-width: #{$bp-small})';
+// SMALL ONLY
+$smallOnly: '(max-width: #{$bp-medium - 0.1rem})';
+// MEDIUM - Smallest tablet and up
+$medium: '(min-width: #{$bp-medium})';
+// LARGE
+$large: '(min-width: #{$bp-large})';
+// XLARGE
+$xlarge: '(min-width: #{$bp-xlarge})';
+// XXLARGE
+//$xxlarge: '(min-width: #{$bp-xxlarge})';
+
+//$tablet-landscape: '(min-width: 768px) and (max-width: 979px)';
+$non-retina: 'screen and (-webkit-max-device-pixel-ratio: 1)';
+$retina: '(min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx)';
+
+@mixin bp($media) {
+  @media only screen and #{$media} {
+    @content;
+  }
+}
+
+// == 4. Typography == //
+h1, h2, h3, h4, h5, h6 {
+  margin: $global-margin 0;
+  font-family: $header-font-family;
+  font-weight: $global-weight-bold;
+  letter-spacing: -0.02em;
+  color: $header-font-color;
+}
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1.125em; }
+h4 { font-size: 1.063em; }
+h5 { font-size: 1em; }
+h6 { font-size: 1em; }
+
+@include bp($large) {
+  h1 { font-size: 3em;	}
+  h2 { font-size: 2em;	}
+  h3 { font-size: 1.5em;	}
+  h4 { font-size: 1.25em;	}
+  h5 { font-size: 1.125em;	}
+  h6 { font-size: 1em;	}
+}
